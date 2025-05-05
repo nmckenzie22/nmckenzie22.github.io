@@ -1,0 +1,11 @@
+---
+title: "FinalProjectCode"
+output: html_document
+date: "2025-05-05"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+hahaha
