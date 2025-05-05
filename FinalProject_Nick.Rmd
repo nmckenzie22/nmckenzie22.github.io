@@ -156,3 +156,97 @@ ggpairs(numeric_data[, c("per_capita_personal_income_2021",
 
 ```
 
+### Training machine learning model
+
+Preprocessing for Modeling:
+```{r}
+# Handling missing values by imputing or removing rows with NA values (based on strategy)
+# We will use median imputation for numeric variables and remove any rows with missing categorical values.
+data_clean <- data %>%
+  mutate(across(where(is.numeric), ~ifelse(is.na(.), median(., na.rm = TRUE), .))) %>%
+  drop_na(state, county)  # Removing rows with missing categorical variables
+
+# Check again for missing values
+colSums(is.na(data_clean))
+
+# Scaling numeric variables (important for models like linear regression)
+numeric_data <- data_clean %>%
+  select(where(is.numeric)) %>%
+  scale()
+
+# Combine the scaled numeric data with the categorical data
+data_preprocessed <- cbind(data_clean %>%
+                              select(state, county, county_fips), numeric_data)
+```
+
+Feature Selection:
+Now let’s define the target variable as per_capita_personal_income_2021. We'll use the other features as predictors.
+```{r}
+# Define the target variable (dependent) and predictor variables (independent)
+target_variable <- "per_capita_personal_income_2021"
+predictors <- setdiff(colnames(data_preprocessed), target_variable)
+
+# Split the data into training and testing sets (70% training, 30% testing)
+set.seed(123)
+train_index <- createDataPartition(data_preprocessed[[target_variable]], p = 0.7, list = FALSE)
+train_data <- data_preprocessed[train_index, ]
+test_data <- data_preprocessed[-train_index, ]
+```
+
+Train a Machine Learning Model:
+For simplicity, we'll start with a linear regression model:
+
+```{r}
+# Train a linear regression model
+lm_model <- lm(as.formula(paste(target_variable, "~", paste(predictors, collapse = "+"))), data = train_data)
+
+# Summary of the model
+summary(lm_model)
+```
+
+Model Evaluation:
+```{r}
+# Combine train and test datasets
+combined_data <- bind_rows(train_data, test_data)
+
+# Ensure 'county_fips' has the same levels in both train and test data
+combined_data$county_fips <- factor(combined_data$county_fips)
+
+# Now split the combined dataset back into training and test datasets
+train_data <- combined_data[1:nrow(train_data), ]
+test_data <- combined_data[(nrow(train_data) + 1):nrow(combined_data), ]
+
+# Remove 'county' from the predictor variables (optional, if you don't need it in the model)
+predictors <- setdiff(predictors, "county")
+# Remove 'county_fips' from predictors if it is not needed in the model
+predictors <- setdiff(predictors, "county_fips")
+
+# Train a linear regression model
+lm_model <- lm(as.formula(paste(target_variable, "~", paste(predictors, collapse = "+"))), data = train_data)
+
+# Summary of the model
+summary(lm_model)
+
+# Predict on the test set
+predictions <- predict(lm_model, newdata = test_data)
+
+# Calculate performance metrics
+actuals <- test_data[[target_variable]]
+residuals <- actuals - predictions
+
+# RMSE (Root Mean Squared Error)
+rmse <- sqrt(mean(residuals^2))
+
+# MAE (Mean Absolute Error)
+mae <- mean(abs(residuals))
+
+# R-squared
+rsq <- 1 - sum(residuals^2) / sum((actuals - mean(actuals))^2)
+
+# Print evaluation metrics
+cat("RMSE:", rmse, "\n")
+cat("MAE:", mae, "\n")
+cat("R-squared:", rsq, "\n")
+
+```
+
