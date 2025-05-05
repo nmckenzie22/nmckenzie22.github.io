@@ -75,4 +75,84 @@ print(variable_summary)
 
 ```
 
+### EDA
+Answering question: How does Education affect income?
+First we look at the summary statistics:
+
+```{r}
+summary(data)
+```
+
+Missing values check:
+```{r}
+colSums(is.na(data))
+```
+
+Income growth over time:
+```{r}
+library(ggplot2)
+
+data %>%
+  pivot_longer(cols = starts_with("per_capita_personal_income"),
+               names_to = "year",
+               names_prefix = "per_capita_personal_income_",
+               values_to = "income") %>%
+  ggplot(aes(x = year, y = income)) +
+  geom_boxplot(fill = "skyblue") +
+  labs(title = "Distribution of Per Capita Income by Year",
+       y = "Income (USD)", x = "Year") +
+  theme_minimal()
+```
+
+Education percentages:
+```{r}
+data %>%
+  select(associate_degree_percentage_2016_2020, bachelor_degree_percentage_2015_2019) %>%
+  pivot_longer(everything(), names_to = "degree_type", values_to = "percentage") %>%
+  ggplot(aes(x = degree_type, y = percentage, fill = degree_type)) +
+  geom_boxplot() +
+  labs(title = "Education Level Distribution", y = "Percentage", x = "Degree Type") +
+  theme_minimal()
+```
+
+Scatter Plots: Education vs. Income (2021):
+```{r}
+ggplot(data, aes(x = associate_degree_percentage_2016_2020, y = per_capita_personal_income_2021)) +
+  geom_point(alpha = 0.5, color = "steelblue") +
+  geom_smooth(method = "lm", se = FALSE, color = "darkred") +
+  labs(title = "Associate Degree % vs. Per Capita Income (2021)",
+       x = "Associate Degree Percentage",
+       y = "Per Capita Income 2021") +
+  theme_minimal()
+
+ggplot(data, aes(x = bachelor_degree_percentage_2015_2019, y = per_capita_personal_income_2021)) +
+  geom_point(alpha = 0.5, color = "forestgreen") +
+  geom_smooth(method = "lm", se = FALSE, color = "darkred") +
+  labs(title = "Bachelor's Degree % vs. Per Capita Income (2021)",
+       x = "Bachelor's Degree Percentage",
+       y = "Per Capita Income 2021") +
+  theme_minimal()
+```
+
+Correlation Matrix:
+```{r}
+library(corrplot)
+
+numeric_data <- data %>%
+  select(where(is.numeric)) %>%
+  na.omit()
+
+cor_matrix <- cor(numeric_data)
+
+corrplot(cor_matrix, method = "color", type = "upper", tl.cex = 0.8)
+
+```
+
+Linear Assumptions & Distribution Checks (This checks: Normality of variables, Linearity, Outliers):
+```{r}
+ggpairs(numeric_data[, c("per_capita_personal_income_2021", 
+                         "associate_degree_percentage_2016_2020", 
+                         "bachelor_degree_percentage_2015_2019")])
+
+```
 
