@@ -8,4 +8,71 @@ date: "2025-05-05"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-hahaha
+```{r}
+# Load required libraries
+library(readr)
+library(dplyr)
+#install.packages("janitor") 
+library(janitor)
+library(httr)
+library(tidyr)
+library(ggplot2)
+#install.packages("caret")
+library(caret)
+#install.packages("corrplot")
+library(corrplot)
+#install.packages("GGally")
+library(GGally)
+#install.packages("forcats")
+library(forcats)
+
+# Read CSV directly from GitHub raw link
+url <- "https://raw.githubusercontent.com/nmckenzie22/Final-Project/main/US%20counties%20-%20education%20vs%20per%20capita%20personal%20income%20-%20results-20221227-213216.csv"
+data <- read_csv(url)
+
+# Clean column names
+data <- clean_names(data)
+
+# Peek at data
+glimpse(data)
+
+```
+
+### Variable Summary Table
+
+```{r}
+library(tibble)
+
+variable_summary <- tibble(
+  Variable = colnames(data),
+  Type = c(
+    "Nominal",  # county_fips
+    "Nominal",  # state
+    "Nominal",  # county
+    "Ratio",    # per_capita_personal_income_2019
+    "Ratio",    # per_capita_personal_income_2020
+    "Ratio",    # per_capita_personal_income_2021
+    "Ratio",    # associate_degree_numbers_2016_2020
+    "Ratio",    # bachelor_degree_numbers_2016_2020
+    "Ratio",    # associate_degree_percentage_2016_2020
+    "Ratio"     # bachelor_degree_percentage_2015_2019
+  ),
+  Description = c(
+    "Federal Information Processing Standards (FIPS) code uniquely identifying the county.",
+    "Two-letter abbreviation of the U.S. state.",
+    "Name of the U.S. county.",
+    "Per capita personal income in 2019 (in USD).",
+    "Per capita personal income in 2020 (in USD).",
+    "Per capita personal income in 2021 (in USD).",
+    "Number of residents with an associate degree between 2016 and 2020.",
+    "Number of residents with a bachelor’s degree between 2016 and 2020.",
+    "Percentage of residents with an associate degree between 2016 and 2020.",
+    "Percentage of residents with a bachelor’s degree between 2015 and 2019."
+  )
+)
+
+print(variable_summary)
+
+```
+
+
