@@ -42,6 +42,9 @@ glimpse(data)
 
 ```{r}
 library(tibble)
+library(tibble)
+library(gridExtra)
+library(grid)
 
 variable_summary <- tibble(
   Variable = colnames(data),
@@ -70,6 +73,10 @@ variable_summary <- tibble(
     "Percentage of residents with a bachelor’s degree between 2015 and 2019."
   )
 )
+# Save table as image
+png("variable_summary_table.png", width = 1200, height = 500)
+grid.table(variable_summary)
+dev.off()
 
 print(variable_summary)
 
@@ -91,47 +98,120 @@ colSums(is.na(data))
 Income growth over time:
 ```{r}
 library(ggplot2)
+library(scales)
+library(dplyr)
+library(tidyr)
 
 data %>%
-  pivot_longer(cols = starts_with("per_capita_personal_income"),
-               names_to = "year",
-               names_prefix = "per_capita_personal_income_",
-               values_to = "income") %>%
+  pivot_longer(
+    cols = starts_with("per_capita_personal_income"),
+    names_to = "year",
+    names_prefix = "per_capita_personal_income_",
+    values_to = "income"
+  ) %>%
   ggplot(aes(x = year, y = income)) +
   geom_boxplot(fill = "skyblue") +
-  labs(title = "Distribution of Per Capita Income by Year",
-       y = "Income (USD)", x = "Year") +
+  labs(
+    title = "Distribution of Per Capita Income by Year",
+    y = "Income (USD)",
+    x = "Year"
+  ) +
+  scale_y_continuous(labels = label_comma()) +  # <-- formats y-axis numbers
   theme_minimal()
+
+# Save to file
+ggsave(
+  filename = "~/Downloads/distribution_income_byYear.png",
+  plot = last_plot(),
+  width = 7,
+  height = 4,
+  dpi = 300
+)
 ```
 
 Education percentages:
 ```{r}
-data %>%
+plot <- data %>%
   select(associate_degree_percentage_2016_2020, bachelor_degree_percentage_2015_2019) %>%
   pivot_longer(everything(), names_to = "degree_type", values_to = "percentage") %>%
   ggplot(aes(x = degree_type, y = percentage, fill = degree_type)) +
   geom_boxplot() +
-  labs(title = "Education Level Distribution", y = "Percentage", x = "Degree Type") +
-  theme_minimal()
+  labs(
+    title = "Education Level Distribution",
+    y = "Percentage"
+  ) +
+  theme_minimal() +
+  theme(
+    axis.title.x = element_blank(),
+    axis.text.x = element_blank(),
+    axis.ticks.x = element_blank()
+  )
+
+# Display plot
+print(plot)
+
+# Save to file
+ggsave(
+  filename = "~/Downloads/education_level_boxplot.png",
+  plot = last_plot(),
+  width = 7,
+  height = 4,
+  dpi = 300
+)
 ```
 
 Scatter Plots: Education vs. Income (2021):
 ```{r}
-ggplot(data, aes(x = associate_degree_percentage_2016_2020, y = per_capita_personal_income_2021)) +
+library(ggplot2)
+library(scales)
+
+# First plot: Associate Degree %
+p1 <- ggplot(data, aes(x = associate_degree_percentage_2016_2020, y = per_capita_personal_income_2021)) +
   geom_point(alpha = 0.5, color = "steelblue") +
   geom_smooth(method = "lm", se = FALSE, color = "darkred") +
-  labs(title = "Associate Degree % vs. Per Capita Income (2021)",
-       x = "Associate Degree Percentage",
-       y = "Per Capita Income 2021") +
+  labs(
+    title = "Associate Degree % vs. Per Capita Income (2021)",
+    x = "Associate Degree Percentage",
+    y = "Per Capita Income 2021"
+  ) +
+  scale_y_continuous(labels = label_comma()) +
   theme_minimal()
 
-ggplot(data, aes(x = bachelor_degree_percentage_2015_2019, y = per_capita_personal_income_2021)) +
+print(p1)
+
+# Save to Downloads (macOS)
+ggsave(
+  filename = "~/Downloads/assoc_deg_vs_income.png",
+  plot = p1,
+  width = 3.5,
+  height = 2,
+  dpi = 300
+)
+
+
+# Second plot: Bachelor's Degree %
+p2 <- ggplot(data, aes(x = bachelor_degree_percentage_2015_2019, y = per_capita_personal_income_2021)) +
   geom_point(alpha = 0.5, color = "forestgreen") +
   geom_smooth(method = "lm", se = FALSE, color = "darkred") +
-  labs(title = "Bachelor's Degree % vs. Per Capita Income (2021)",
-       x = "Bachelor's Degree Percentage",
-       y = "Per Capita Income 2021") +
+  labs(
+    title = "Bachelor's Degree % vs. Per Capita Income (2021)",
+    x = "Bachelor's Degree Percentage",
+    y = "Per Capita Income 2021"
+  ) +
+  scale_y_continuous(labels = label_comma()) +
   theme_minimal()
+
+print(p2)
+
+# Save to Downloads (macOS)
+ggsave(
+  filename = "~/Downloads/bach_deg_vs_income.png",
+  plot = p2,
+  width = 7,
+  height = 4,
+  dpi = 300
+)
+
 ```
 
 Correlation Matrix:
