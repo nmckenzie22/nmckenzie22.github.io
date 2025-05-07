@@ -130,8 +130,8 @@ Each included a linear regression trend line.
 	•	Purpose: To visually assess the strength and direction of correlation between education level and income.
 	•	Insight: A clear positive trend would suggest that higher education rates are associated with higher per capita income.
 
-![Associate Degree Percentage](images/associate-degree-percentage.png)
-![Bachelors Degree Percentage](images/bachelors-degree-percentage.png)
+![Associate Degree Percentage](images/associate-degree-percentage)
+![Bachelors Degree Percentage](images/bachelors-degree-percentage)
 
 The associate degree chart shows a very weak relationship—counties with higher associate degree percentages do not consistently report higher income. The trendline is nearly flat, suggesting little predictive power.
 
