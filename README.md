@@ -95,7 +95,7 @@ We checked for missing values across all columns using colSums(is.na(data)).
 
 ⸻
 
-## Income Growth Over Time
+### Income Growth Over Time
 
 We visualized how per capita income changed across 2019, 2020, and 2021 using boxplots.
 	•	Purpose: To observe income distribution and trends over time, and to check for major economic shifts (e.g., pandemic impact).
