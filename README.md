@@ -63,6 +63,27 @@ Using the summary() function, we obtained descriptive statistics (mean, median, 
 
 📌 Insert: Summary statistics output
 
+To better understand the structure of our dataset, we reviewed the variable types and key summary statistics across all 3,006 U.S. counties.
+
+**Dataset Overview**
+The dataset includes 10 columns: 3 nominal identifiers (county FIPS, state, county name) and 7 ratio-scale variables covering income and education metrics.
+
+**Income Distribution**
+
+Per capita personal income increased steadily from a mean of $45,947 in 2019 to $53,308 in 2021.
+
+Income is right-skewed with a 2021 maximum of $318,297, indicating a few high-income counties disproportionately pulling up the average.
+
+**Education Statistics**
+
+Associate degree percentages range from a minimum of ~0% to a maximum over 80%, with a median around ~30%.
+
+Bachelor’s degree percentages show an even wider spread, ranging up to nearly 76% in some counties, with a median around 33%.
+
+Raw degree counts vary massively—some counties have just a few hundred degree holders, while the largest counties exceed 1–2 million.
+
+These distributions reaffirm our earlier visual findings: education levels and income vary drastically across counties, setting the stage to analyze how tightly they are connected.
+
 ⸻
 
 4. Missing Values Check
