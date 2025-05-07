@@ -138,7 +138,7 @@ This scatterplot explores the relationship between associate degree attainment a
 
 This weak correlation raises questions about the economic value of associate degrees at the county level. While associate degrees are more accessible and widely distributed, they may not deliver the same income boost as bachelor’s degrees. These results suggest that associate-level education alone may not be a strong driver of income growth and underscore the need to examine how different levels of educational attainment contribute to economic outcomes.
 
-![Bachelors Degree Percentage](images/bachelors-degree-percentage)
+![Bachelor's Degree vs Income](images/bach_deg_vs_income.png)
 
 This scatterplot shows the relationship between bachelor’s degree attainment and per capita income across U.S. counties in 2021. Compared to the previous chart on associate degrees, this graph reveals a much clearer positive correlation. As the percentage of residents with a bachelor’s degree increases, per capita income tends to rise as well. The upward-sloping regression line confirms this trend, suggesting that counties with higher levels of four-year college attainment generally experience higher income levels.
 
