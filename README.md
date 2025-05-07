@@ -11,7 +11,7 @@ At the same time, it is important to recognize that income is shaped by more tha
 
 To explore this, we analyzed a dataset that includes income data from 2019 to 2021 and education statistics spanning from 2015 to 2020. By comparing these variables across hundreds of U.S. counties, we aim to assess whether patterns exist that can help explain economic outcomes through the lens of higher education. While this study is limited to quantitative correlations, it can serve as a starting point for understanding how educational investment might influence local economies and where such investment may have the greatest impact.
 
-Ultimately, our goal is to test whether increasing educational attainment truly aligns with increased personal income—and to consider what this relationship implies for regional policy, resource allocation, and long-term economic development in the United States.
+Ultimately, **our goal is to test whether increasing educational attainment aligns with increased personal income** and to consider what this relationship implies for regional policy, resource allocation, and long-term economic development in the United States.
 
 
 ## Data Organization
