@@ -134,6 +134,10 @@ Each included a linear regression trend line.
 	•	Insight: A clear positive trend would suggest that higher education rates are associated with higher per capita income.
 
 ![Associate Degree Percentage](images/associate-degree-percentage)
+This scatterplot explores the relationship between associate degree attainment and per capita income in 2021. The data show that while most counties have associate degree rates between 20% and 40%, income levels vary widely, with no clear upward trend. The flat regression line reinforces this observation—higher associate degree percentages do not consistently align with higher incomes. Though a few counties report exceptionally high income, they do not correspond to the highest associate degree rates, suggesting these outliers are influenced by other factors like local industry or advanced degrees.
+
+This weak correlation raises questions about the economic value of associate degrees at the county level. While associate degrees are more accessible and widely distributed, they may not deliver the same income boost as bachelor’s degrees. These results suggest that associate-level education alone may not be a strong driver of income growth and underscore the need to examine how different levels of educational attainment contribute to economic outcomes.
+
 ![Bachelors Degree Percentage](images/bachelors-degree-percentage)
 
 The associate degree chart shows a very weak relationship between degree attainment and income. Counties with higher percentages of associate degree holders do not consistently report higher per capita income, and the nearly flat trendline suggests minimal predictive power. This implies that while associate degrees may offer personal or local benefits, they don’t appear to be a strong economic differentiator at the county level.
