@@ -32,9 +32,13 @@ The education data, from the USDA County-Level Dataset, includes both counts and
 - associate_degree_percentage_2016_2020
 - bachelor_degree_percentage_2015_2019
 
+This dataset provides both the total number and the percentage of county residents who earned associate and bachelor’s degrees over specified time periods.
+
 We also retained identifying information:
 
 - county_FIPS, state, county
+
+These columns identify the geographic location of each observation using the county’s FIPS code, state name, and county name.
 
 These variables enable analysis of both absolute and relative educational attainment, allowing us to explore how income levels relate to education across different counties and regions. The multi-year averages smooth out short-term fluctuations and improve reliability. This structured dataset sets the foundation for statistical and spatial analysis of the link between economic prosperity and access to higher education.
 
