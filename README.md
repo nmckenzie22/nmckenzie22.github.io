@@ -43,7 +43,127 @@ These columns identify the geographic location of each observation using the cou
 These variables enable analysis of both absolute and relative educational attainment, allowing us to explore how income levels relate to education across different counties and regions. The multi-year averages smooth out short-term fluctuations and improve reliability. This structured dataset sets the foundation for statistical and spatial analysis of the link between economic prosperity and access to higher education.
 
 ## Exploratory Data Analysis
-talk about EDA here. add graphs/picture and code later. make sure to make a header for each point u are talking about
+Research Question: How does education affect income at the county level in the United States?
+
+To begin exploring the relationship between education and income, we conducted a thorough Exploratory Data Analysis (EDA) using a dataset containing U.S. county-level data on per capita personal income from 2019 to 2021, along with educational attainment rates for associate’s and bachelor’s degrees.
+
+⸻
+
+1. Data Overview and Cleaning
+
+We started by reading the data from a CSV file hosted on GitHub and used the janitor package to clean and standardize column names. This is important to ensure consistent formatting for downstream analysis and modeling.
+	•	Purpose: Standardized column names help prevent errors in processing and simplify referencing variables.
+	•	Code used: clean_names() from the janitor package.
+
+We also used glimpse() to inspect the structure of the dataset, which allowed us to quickly confirm the types and completeness of our variables.
+
+📌 Insert: Screenshot or printout of glimpse(data) output
+
+⸻
+
+2. Variable Summary Table
+
+We created a variable summary table to document each feature’s type (nominal, ratio) and a short description. This helps in understanding the dataset schema and planning which variables are suitable for modeling and visualization.
+
+📌 Insert: Table summarizing variable types and descriptions (already included in the code)
+
+⸻
+
+3. Summary Statistics
+
+Using the summary() function, we obtained descriptive statistics (mean, median, min, max, etc.) for all numerical variables.
+	•	Purpose: This provides a general sense of distribution, central tendency, and variation in the data.
+
+📌 Insert: Summary statistics output
+
+⸻
+
+4. Missing Values Check
+
+We checked for missing values across all columns using colSums(is.na(data)).
+	•	Purpose: Identifying and handling missing data is crucial to avoid bias or errors in modeling.
+
+📌 Insert: Output showing missing value counts per column
+
+⸻
+
+5. Income Growth Over Time
+
+We visualized how per capita income changed across 2019, 2020, and 2021 using boxplots.
+	•	Purpose: To observe income distribution and trends over time, and to check for major economic shifts (e.g., pandemic impact).
+	•	Insight: This helps contextualize education’s effect on income by tracking whether changes in income are consistent over time.
+
+📊 Insert: Boxplot of income by year
+
+⸻
+
+6. Education Level Distributions
+
+We plotted boxplots of associate and bachelor’s degree percentages.
+	•	Purpose: To understand how educational attainment is distributed across counties, which is foundational for correlating with income.
+
+📊 Insert: Boxplot comparing education percentages
+
+⸻
+
+7. Education vs. Income (Scatter Plots)
+
+We created two scatter plots showing the relationship between:
+	•	Associate Degree % and Income (2021)
+	•	Bachelor’s Degree % and Income (2021)
+
+Each included a linear regression trend line.
+	•	Purpose: To visually assess the strength and direction of correlation between education level and income.
+	•	Insight: A clear positive trend would suggest that higher education rates are associated with higher per capita income.
+
+📊 Insert: Two scatter plots with linear trends
+
+⸻
+
+8. Correlation Matrix
+
+We created a correlation matrix and heatmap for all numeric variables.
+	•	Purpose: To quantitatively identify relationships between variables.
+	•	Insight: This confirms whether our educational variables are significantly correlated with income, justifying their use in a predictive model.
+
+📊 Insert: Correlation matrix heatmap
+
+⸻
+
+9. Linear Assumption & Distribution Checks
+
+Using ggpairs, we evaluated distributions, outliers, and pairwise relationships between key variables.
+	•	Purpose: To visually assess assumptions for linear modeling, including normality and linear relationships.
+	•	Insight: Ensures that data meets the assumptions required for linear regression to be valid.
+
+📊 Insert: GGPairs matrix showing histograms and scatter plots
+
+⸻
+
+10. Preprocessing for Modeling
+
+Before training the model, we handled missing values via median imputation for numeric columns and dropped rows with missing categorical values. We also scaled numeric variables.
+	•	Purpose: Preprocessing ensures that the model is trained on clean, normalized data, which improves accuracy and convergence.
+	•	Insight: Proper preprocessing prevents data skew and enhances model interpretability.
+
+📌 Insert: Note or table showing before/after stats for NA counts and feature scales
+
+⸻
+
+11. Feature Selection and Data Splitting
+
+We selected per_capita_personal_income_2021 as the target variable and used the remaining features as predictors. We split the data into training and test sets (70/30).
+	•	Purpose: Splitting ensures the model can be evaluated on unseen data, which is essential for estimating real-world performance.
+
+📌 Insert: Table showing number of observations in train/test sets
+
+⸻
+
+12. Summary
+
+Our EDA shows promising evidence of a positive relationship between education levels and income. These insights justify the development of a predictive model using education rates as key features.
+
+⸻
 
 ## Main Observations and Conclusion
 .
