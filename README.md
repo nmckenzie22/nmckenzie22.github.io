@@ -152,7 +152,7 @@ We created a correlation matrix and heatmap for all numeric variables.
 	•	Purpose: To quantitatively identify relationships between variables.
 	•	Insight: This confirms whether our educational variables are significantly correlated with income, justifying their use in a predictive model.
 
-📊 Insert: Correlation matrix heatmap
+![Correlation Plot](images/correlation_plot.png)
 
 
 This scatterplot matrix provides a compact view of the relationships between per capita income (2021), associate degree percentage, and bachelor’s degree percentage. The correlation values and scatterplots align closely with our previous findings.
