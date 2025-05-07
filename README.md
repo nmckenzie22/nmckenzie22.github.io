@@ -112,9 +112,11 @@ We plotted boxplots of associate and bachelor’s degree percentages.
 
 ![Education Level Distribution](images/education_level_boxplot.png)
 
-Associate degree attainment is generally higher and more consistent across counties, with a tighter spread and higher median. Bachelor’s degree attainment varies more widely, with a long tail of counties having very low or very high percentages.
 
-This variation raises the question: which level of education—associate or bachelor’s—has a stronger relationship with income growth?
+Associate degree attainment is generally higher and more consistent across counties, likely due to broader access through community colleges. In contrast, bachelor’s degree attainment shows much wider variation—some counties have very low rates while others report extremely high percentages, reflecting structural disparities in access to four-year institutions.
+
+This contrast raises a key question: **which level of education—associate or bachelor’s—is more closely linked to income?** If associate degrees correlate strongly with income, they may offer a more accessible path to economic growth. If bachelor’s degrees show a stronger link, efforts to expand four-year degree access could have greater impact. To investigate, we next compare each degree type directly with income levels.
+
 
 ⸻
 
