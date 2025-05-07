@@ -44,7 +44,7 @@ These variables enable analysis of both absolute and relative educational attain
 
 We started by reading the data from a CSV file hosted on GitHub and used the janitor package to clean and standardize column names. This is important to ensure consistent formatting for downstream analysis and modeling. We then created a variable summary table to document each feature’s type (nominal, ratio) and a short description. This helps in understanding the dataset schema and planning which variables are suitable for modeling and visualization.
 
-#### Variable Summary Table
+### Variable Summary Table
 ![Variable Summary Table](images/variable_summary_table.png)
 
 
@@ -86,7 +86,7 @@ These distributions reaffirm our earlier visual findings: education levels and i
 
 ⸻
 
-4. Missing Values Check
+### Missing Values Check
 
 We checked for missing values across all columns using colSums(is.na(data)).
 	•	Purpose: Identifying and handling missing data is crucial to avoid bias or errors in modeling.
@@ -95,7 +95,7 @@ We checked for missing values across all columns using colSums(is.na(data)).
 
 ⸻
 
-5. Income Growth Over Time
+## Income Growth Over Time
 
 We visualized how per capita income changed across 2019, 2020, and 2021 using boxplots.
 	•	Purpose: To observe income distribution and trends over time, and to check for major economic shifts (e.g., pandemic impact).
@@ -108,7 +108,7 @@ This boxplot illustrates the distribution of per capita income across U.S. count
 
 ⸻
 
-6. Education Level Distributions
+### Distributions of Education Level
 
 We plotted boxplots of associate and bachelor’s degree percentages.
 	•	Purpose: To understand how educational attainment is distributed across counties, which is foundational for correlating with income.
@@ -123,7 +123,7 @@ This contrast raises a key question: **which level of education—associate or b
 
 ⸻
 
-7. Education vs. Income (Scatter Plots)
+ ### Education vs. Income 
 
 We created two scatter plots showing the relationship between:
 	•	Associate Degree % and Income (2021)
@@ -146,7 +146,7 @@ The spread of data is broader at higher education levels, reflecting greater var
 
 ⸻
 
-8. Correlation Matrix
+### Variable Correlation
 
 We created a correlation matrix and heatmap for all numeric variables.
 	•	Purpose: To quantitatively identify relationships between variables.
@@ -166,7 +166,7 @@ An interesting secondary pattern is the slight negative correlation (-0.059) bet
 Overall, this matrix helps confirm that while both degrees are common across the U.S., only bachelor’s degree attainment shows a strong and consistent relationship with income, providing clear direction for policy and investment strategies.
 ⸻
 
-9. Linear Assumption & Distribution Checks
+### Linear Assumption & Distribution Checks
 
 Using ggpairs, we evaluated distributions, outliers, and pairwise relationships between key variables.
 	•	Purpose: To visually assess assumptions for linear modeling, including normality and linear relationships.
@@ -177,7 +177,7 @@ Using ggpairs, we evaluated distributions, outliers, and pairwise relationships 
 
 ⸻
 
-10. Preprocessing for Modeling
+### Preprocessing for Modeling
 
 Before training the model, we handled missing values via median imputation for numeric columns and dropped rows with missing categorical values. We also scaled numeric variables.
 	•	Purpose: Preprocessing ensures that the model is trained on clean, normalized data, which improves accuracy and convergence.
@@ -194,13 +194,6 @@ We selected per_capita_personal_income_2021 as the target variable and used the 
 
 📌 Insert: Table showing number of observations in train/test sets
 
-⸻
-
-12. Summary
-
-Our EDA shows promising evidence of a positive relationship between education levels and income. These insights justify the development of a predictive model using education rates as key features.
-
-⸻
 
 ## Main Observations and Conclusion
 .
