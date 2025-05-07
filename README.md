@@ -101,7 +101,7 @@ We visualized how per capita income changed across 2019, 2020, and 2021 using bo
 	•	Purpose: To observe income distribution and trends over time, and to check for major economic shifts (e.g., pandemic impact).
 	•	Insight: This helps contextualize education’s effect on income by tracking whether changes in income are consistent over time.
 
-📊 Insert: Boxplot of income by year
+![Distribution of Per Capita Income by Year](images/distribution_income_byYear.png)
 
 ⸻
 
