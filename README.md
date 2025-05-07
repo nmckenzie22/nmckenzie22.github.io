@@ -172,7 +172,8 @@ Using ggpairs, we evaluated distributions, outliers, and pairwise relationships 
 	•	Purpose: To visually assess assumptions for linear modeling, including normality and linear relationships.
 	•	Insight: Ensures that data meets the assumptions required for linear regression to be valid.
 
-📊 Insert: GGPairs matrix showing histograms and scatter plots
+![Pairwise Comparison Plot](images/clean_pair_plot.png)
+
 
 ⸻
 
