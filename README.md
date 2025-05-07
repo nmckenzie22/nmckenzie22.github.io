@@ -103,6 +103,9 @@ We visualized how per capita income changed across 2019, 2020, and 2021 using bo
 
 ![Distribution of Per Capita Income by Year](images/distribution_income_byYear.png)
 
+
+This boxplot illustrates the distribution of per capita income across U.S. counties from 2019 to 2021. Across all three years, the distribution is right-skewed, with a small number of counties reporting very high incomes. While the overall shape remains consistent, there is a gradual increase in both the median and upper quartile values each year, indicating modest national income growth. These results establish a baseline for our analysis, helping us explore whether rising income levels are consistently linked to higher education attainment across counties.
+
 ⸻
 
 6. Education Level Distributions
