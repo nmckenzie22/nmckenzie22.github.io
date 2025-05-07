@@ -15,7 +15,25 @@ Ultimately, our goal is to test whether increasing educational attainment truly 
 
 
 ## Data Organization
-talk about the Variable Summary Table here
+To explore the question of how income levels affect educational attainment across U.S. counties, we utilized a merged dataset that combines per capita personal income data with educational attainment statistics. These data were sourced from two authoritative federal agencies: the Bureau of Economic Analysis (BEA) and the United States Department of Agriculture (USDA). The dataset includes values for all U.S. counties as of the year 2021, offering a detailed and granular view of socioeconomic and educational outcomes across the country.
+
+The first component of our dataset—per capita personal income by county—was released in November 2022 by the BEA. This data measures the average income earned per person in a given county and is calculated by dividing the total personal income of the county by its population. Personal income includes wages, business income, dividends, rent, government benefits, and other sources of compensation. By using the 2021 data (the most recent available), we ensure our analysis reflects current economic realities. It is important to note that these income figures do not account for regional cost-of-living differences, but they do provide a useful baseline for comparing relative economic prosperity across counties.
+
+The second component comes from the USDA’s County-Level Data Sets, which compile demographic and socioeconomic indicators across rural and urban counties. From this resource, we extracted statistics on educational attainment—specifically, the number and percentage of county residents who have earned an associate’s degree and a bachelor’s degree. These figures are aggregated over a 5-year period (2016–2020 for associate’s degree numbers and 2015–2019 for bachelor’s degree percentages), allowing for smoothing over short-term fluctuations and improving the robustness of the data.
+
+After cleaning and merging the datasets, we retained the following key attributes for our analysis:
+	•	county_FIPS: A unique identifier for each county (Federal Information Processing Standard code)
+	•	state: Name of the state where the county is located
+	•	county: Name of the county
+	•	per_capita_personal_income_2021: Average personal income per individual in the county for 2021
+	•	associate_degree_percentage_2016_2020: Percentage of county population holding an associate’s degree
+	•	bachelor_degree_percentage_2015_2019: Percentage of county population holding a bachelor’s degree
+
+This integrated dataset enables us to analyze the relationship between economic prosperity and educational attainment at the county level. Specifically, we are interested in assessing whether higher income levels are associated with higher percentages of residents completing associate and bachelor’s degrees. This analysis will help inform whether income disparities may be contributing to unequal access to or attainment of higher education.
+
+Furthermore, by working with data at the county level, we can explore regional variations and identify patterns specific to urban, suburban, and rural areas. This spatial granularity is critical because income and education dynamics often differ significantly across geographic contexts. For example, counties with high income may cluster in metropolitan areas with greater access to higher education institutions, while lower-income rural counties may face structural barriers that limit educational opportunities.
+
+Ultimately, this dataset provides a foundation for performing statistical analyses such as correlation, regression modeling, and geographic visualizations, which will allow us to draw meaningful conclusions about how income influences educational outcomes across the United States.
 
 ## Exploratory Data Analysis
 talk about EDA here. add graphs/picture and code later. make sure to make a header for each point u are talking about
