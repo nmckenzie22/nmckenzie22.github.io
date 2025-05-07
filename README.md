@@ -118,6 +118,12 @@ Each included a linear regression trend line.
 
 📊 Insert: Two scatter plots with linear trends
 
+The associate degree chart shows a very weak relationship—counties with higher associate degree percentages do not consistently report higher income. The trendline is nearly flat, suggesting little predictive power.
+
+In contrast, the bachelor’s degree plot shows a clear upward trend. As the percentage of residents with bachelor’s degrees increases, so does per capita income. The positive correlation is much stronger, reinforcing the idea that bachelor’s degrees are more closely tied to economic outcomes at the county level.
+
+This comparison highlights that not all degrees impact income equally—and suggests that counties aiming to boost income may benefit more from policies that promote four-year degree attainment.
+
 ⸻
 
 8. Correlation Matrix
