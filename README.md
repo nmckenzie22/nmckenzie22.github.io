@@ -140,11 +140,9 @@ This weak correlation raises questions about the economic value of associate deg
 
 ![Bachelors Degree Percentage](images/bachelors-degree-percentage)
 
-The associate degree chart shows a very weak relationship between degree attainment and income. Counties with higher percentages of associate degree holders do not consistently report higher per capita income, and the nearly flat trendline suggests minimal predictive power. This implies that while associate degrees may offer personal or local benefits, they don’t appear to be a strong economic differentiator at the county level.
+This scatterplot shows the relationship between bachelor’s degree attainment and per capita income across U.S. counties in 2021. Compared to the previous chart on associate degrees, this graph reveals a much clearer positive correlation. As the percentage of residents with a bachelor’s degree increases, per capita income tends to rise as well. The upward-sloping regression line confirms this trend, suggesting that counties with higher levels of four-year college attainment generally experience higher income levels.
 
-In contrast, the scatterplot for bachelor’s degree attainment reveals a clear and consistent upward trend. As the share of bachelor’s degree holders increases, per capita income rises as well. The stronger correlation and steeper trendline suggest that bachelor’s degrees play a more significant role in shaping local economic outcomes.
-
-This comparison highlights that not all degrees contribute equally to income growth. While associate degrees are more widespread and accessible, their economic impact appears limited in comparison. These findings suggest that counties aiming to raise income levels may benefit more from investing in policies and programs that expand access to four-year college education.
+The spread of data is broader at higher education levels, reflecting greater variability in income among counties with more bachelor’s degree holders. Still, the clustering of points along the trend line indicates a stronger and more consistent link between bachelor’s degrees and economic prosperity. This pattern supports the hypothesis that bachelor’s-level education plays a more direct role in boosting income, and underscores the potential value of policies that increase access to four-year degree programs.
 
 ⸻
 
