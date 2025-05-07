@@ -42,30 +42,17 @@ These columns identify the geographic location of each observation using the cou
 
 These variables enable analysis of both absolute and relative educational attainment, allowing us to explore how income levels relate to education across different counties and regions. The multi-year averages smooth out short-term fluctuations and improve reliability. This structured dataset sets the foundation for statistical and spatial analysis of the link between economic prosperity and access to higher education.
 
+We started by reading the data from a CSV file hosted on GitHub and used the janitor package to clean and standardize column names. This is important to ensure consistent formatting for downstream analysis and modeling. We then created a variable summary table to document each feature’s type (nominal, ratio) and a short description. This helps in understanding the dataset schema and planning which variables are suitable for modeling and visualization.
+
+#### Variable Summary Table
+![Variable Summary Table](images/variable_summary_table.png)
+
+
 ## Exploratory Data Analysis
 Research Question: How does education affect income at the county level in the United States?
 
 To begin exploring the relationship between education and income, we conducted a thorough Exploratory Data Analysis (EDA) using a dataset containing U.S. county-level data on per capita personal income from 2019 to 2021, along with educational attainment rates for associate’s and bachelor’s degrees.
 
-⸻
-
-1. Data Overview and Cleaning
-
-We started by reading the data from a CSV file hosted on GitHub and used the janitor package to clean and standardize column names. This is important to ensure consistent formatting for downstream analysis and modeling.
-	•	Purpose: Standardized column names help prevent errors in processing and simplify referencing variables.
-	•	Code used: clean_names() from the janitor package.
-
-We also used glimpse() to inspect the structure of the dataset, which allowed us to quickly confirm the types and completeness of our variables.
-
-📌 Insert: Screenshot or printout of glimpse(data) output
-
-⸻
-
-2. Variable Summary Table
-
-We created a variable summary table to document each feature’s type (nominal, ratio) and a short description. This helps in understanding the dataset schema and planning which variables are suitable for modeling and visualization.
-
-📌 Insert: Table summarizing variable types and descriptions (already included in the code)
 
 ⸻
 
