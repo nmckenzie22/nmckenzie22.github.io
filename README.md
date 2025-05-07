@@ -110,7 +110,8 @@ We visualized how per capita income changed across 2019, 2020, and 2021 using bo
 We plotted boxplots of associate and bachelor’s degree percentages.
 	•	Purpose: To understand how educational attainment is distributed across counties, which is foundational for correlating with income.
 
-📊 Insert: Boxplot comparing education percentages
+![Education Level Distribution](images/education_level_boxplot.png)
+
 
 ⸻
 
