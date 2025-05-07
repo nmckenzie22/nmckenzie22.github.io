@@ -22,16 +22,17 @@ The income component of the dataset includes per capita personal income for the 
 The educational attainment component is drawn from the USDA’s County-Level Data Sets and encompasses both absolute numbers and percentages of residents who have attained associate’s and bachelor’s degrees. Specifically, associate degree data (both number and percentage) is aggregated from 2016 to 2020, while bachelor’s degree percentages are based on the 2015–2019 period. This multiyear aggregation enhances reliability by reducing volatility and accounting for delayed reporting or temporary fluctuations.
 
 After data cleaning and integration, we retained the following columns for analysis:
-	•	county_FIPS: A five-digit Federal Information Processing System code uniquely identifying each county
-	•	state: Full name of the U.S. state in which the county resides
-	•	county: Name of the county
-	•	per_capita_personal_income_2019: County-level per capita income in 2019
-	•	per_capita_personal_income_2020: County-level per capita income in 2020
-	•	per_capita_personal_income_2021: County-level per capita income in 2021
-	•	associate_degree_numbers_2016_2020: Total number of individuals in the county who attained an associate’s degree from 2016–2020
-	•	bachelor_degree_numbers_2016_2020: Total number of individuals in the county who attained a bachelor’s degree from 2016–2020
-	•	associate_degree_percentage_2016_2020: Percentage of the population with an associate’s degree (2016–2020)
-	•	bachelor_degree_percentage_2015_2019: Percentage of the population with a bachelor’s degree (2015–2019)
+
+- county_FIPS: A five-digit Federal Information Processing System code uniquely identifying each county
+- state: Full name of the U.S. state in which the county resides
+- county: Name of the county
+- per_capita_personal_income_2019: County-level per capita income in 2019
+- per_capita_personal_income_2020: County-level per capita income in 2020
+- per_capita_personal_income_2021: County-level per capita income in 2021
+- associate_degree_numbers_2016_2020: Total number of individuals in the county who attained an associate’s degree from 2016–2020
+- bachelor_degree_numbers_2016_2020: Total number of individuals in the county who attained a bachelor’s degree from 2016–2020
+- associate_degree_percentage_2016_2020: Percentage of the population with an associate’s degree (2016–2020)
+- bachelor_degree_percentage_2015_2019: Percentage of the population with a bachelor’s degree (2015–2019)
 
 This comprehensive dataset enables a robust analysis of the relationship between economic conditions and educational outcomes. In particular, we examine whether higher income levels correlate with increased rates of associate and bachelor’s degree attainment. By using both percentage-based and count-based indicators, we ensure that our results are not distorted by population size alone.
 
