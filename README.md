@@ -136,11 +136,11 @@ Each included a linear regression trend line.
 ![Associate Degree Percentage](images/associate-degree-percentage)
 ![Bachelors Degree Percentage](images/bachelors-degree-percentage)
 
-The associate degree chart shows a very weak relationship—counties with higher associate degree percentages do not consistently report higher income. The trendline is nearly flat, suggesting little predictive power.
+The associate degree chart shows a very weak relationship between degree attainment and income. Counties with higher percentages of associate degree holders do not consistently report higher per capita income, and the nearly flat trendline suggests minimal predictive power. This implies that while associate degrees may offer personal or local benefits, they don’t appear to be a strong economic differentiator at the county level.
 
-In contrast, the bachelor’s degree plot shows a clear upward trend. As the percentage of residents with bachelor’s degrees increases, so does per capita income. The positive correlation is much stronger, reinforcing the idea that bachelor’s degrees are more closely tied to economic outcomes at the county level.
+In contrast, the scatterplot for bachelor’s degree attainment reveals a clear and consistent upward trend. As the share of bachelor’s degree holders increases, per capita income rises as well. The stronger correlation and steeper trendline suggest that bachelor’s degrees play a more significant role in shaping local economic outcomes.
 
-This comparison highlights that not all degrees impact income equally—and suggests that counties aiming to boost income may benefit more from policies that promote four-year degree attainment.
+This comparison highlights that not all degrees contribute equally to income growth. While associate degrees are more widespread and accessible, their economic impact appears limited in comparison. These findings suggest that counties aiming to raise income levels may benefit more from investing in policies and programs that expand access to four-year college education.
 
 ⸻
 
