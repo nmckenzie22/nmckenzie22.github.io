@@ -24,7 +24,6 @@ The income data, sourced from the BEA (November 2022 release), includes:
 - per_capita_personal_income_2021
 
 These figures represent average income per person in each county, incorporating wages, investment returns, and government transfers.
-
 The education data, from the USDA County-Level Dataset, includes both counts and percentages:
 
 - associate_degree_numbers_2016_2020
