@@ -151,6 +151,8 @@ EDA identifies missing values, outliers, or skewed data, but the data often stil
 | 3rd Quartile (3Q) | 0.03796  |
 | Max               | 1.59719  |
 
+These values suggest that the residuals are relatively small (since the median residual is very close to zero) and there are no extreme outliers. The residuals range from -0.66 to 1.60, indicating that the model occasionally overestimates and underestimates the target variable, but these deviations are not excessively large.
+
 #### Model Summary
 Residual Standard Error: 0.1308 (on 2051 degrees of freedom)
 
@@ -169,6 +171,9 @@ Mean Absolute Error (MAE): 0.0732
 
 R-squared: 0.9815
 
+Overall, these metrics suggest that the linear regression model is performing well. The high R-squared and low RMSE/MAE values indicate that the model is accurate and that the predictors (such as associate degree percentage and bachelor's degree percentage) are strongly associated with per capita income. The adjusted R-squared suggests that the model has a high predictive power, which is crucial for making meaningful predictions about per capita income based on education levels and other predictors and the the F-statistic and p-value confirm that the model as a whole is statistically significant.
+
+The model shows that education level percentages (such as the percentage of people with an associate or bachelor’s degree) are important factors in predicting per capita income in 2021. The model’s high accuracy and low errors suggest that it can be used to make reliable predictions.
 
 ## Main Observations and Conclusion
 .
