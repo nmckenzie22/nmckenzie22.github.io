@@ -132,12 +132,11 @@ Overall, this matrix helps confirm that while both degrees are common across the
 
 ### Linear Assumption & Distribution Checks
 
-Using ggpairs, we evaluated distributions, outliers, and pairwise relationships between key variables.
-	•	Purpose: To visually assess assumptions for linear modeling, including normality and linear relationships.
-	•	Insight: Ensures that data meets the assumptions required for linear regression to be valid.
+Using ggpairs, we evaluated distributions, outliers, and pairwise relationships between key variables in order to visually assess assumptions for linear modeling, including normality and linear relationships. This ensures that data meets the assumptions required for linear regression to be valid.
 
 ![Pairwise Comparison Plot](images/clean_pair_plot.png)
 
+Our research question assumes some form of relationship between education attainment and income. These findings reinforce what we saw from the correlation matrix allows us to see both correlation strength and distribution shapes, adding nuance to the findings. Regarding the Linear Assumption check, From the Per Capita Income 2021 vs. Bachelor’s Degree % we see the scatterplot in the pair plot shows a clear upward trend, supporting a linear relationship. However, the Per Capita Income 2021 vs. Associate Degree % scatterplot appears random, with no clear trend. This suggests no linear relationship, and possibly no relationship at all. In terms of the Distribution Check, the diagonal plots show kernel density estimates (KDEs) for the distribution of each variable: Per Capita Income 2021 is Right-skewed, Associate Degree % is Symmetrical and almost normal, and Bachelor’s Degree % is also right-skewed, but less so than income.
 
 ## Training Machine Learning Model
 
