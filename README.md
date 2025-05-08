@@ -173,4 +173,7 @@ probs figure out later
 
 ## Links
 Youtube Video:
-Google Colab:
+
+Google Colab: https://colab.research.google.com/drive/1txZM5BAAxc7LEmcCqH3fBvP8fF4bm-2z?usp=sharing
+
+## Acknowledgements
