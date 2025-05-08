@@ -60,18 +60,7 @@ To quickly summarise our data set statistics we are showing key findings below:
 
 **Education Statistics**: Associate degree percentages range from a minimum of ~0% to a maximum over 80%, with a median around ~30%. Bachelor’s degree percentages show an even wider spread, ranging up to nearly 76% in some counties, with a median around 33%. Raw degree counts vary massively—some counties have just a few hundred degree holders, while the largest counties exceed 1–2 million.
 
-These distributions reaffirm our earlier visual findings: education levels and income vary drastically across counties, setting the stage to analyze how tightly they are connected.
-
-⸻
-
-### Missing Values Check
-
-We checked for missing values across all columns using colSums(is.na(data)).
-	•	Purpose: Identifying and handling missing data is crucial to avoid bias or errors in modeling.
-
-📌 Insert: Output showing missing value counts per column
-
-⸻
+These distributions reaffirm our earlier visual findings: education levels and income vary drastically across counties, setting the stage to analyze how tightly they are connected. To further visualize these statistics along with the missing values check, please refer to our notebook. 
 
 ### Income Growth Over Time
 
@@ -84,7 +73,6 @@ We visualized how per capita income changed across 2019, 2020, and 2021 using bo
 
 This boxplot illustrates the distribution of per capita income across U.S. counties from 2019 to 2021. Across all three years, the distribution is right-skewed, with a small number of counties reporting very high incomes. While the overall shape remains consistent, there is a gradual increase in both the median and upper quartile values each year, indicating modest national income growth. These results establish a baseline for our analysis, helping us explore whether rising income levels are consistently linked to higher education attainment across counties.
 
-⸻
 
 ### Distributions of Education Level
 
@@ -99,7 +87,6 @@ Associate degree attainment is generally higher and more consistent across count
 This contrast raises a key question: **which level of education—associate or bachelor’s—is more closely linked to income?** If associate degrees correlate strongly with income, they may offer a more accessible path to economic growth. If bachelor’s degrees show a stronger link, efforts to expand four-year degree access could have greater impact. To investigate, we next compare each degree type directly with income levels.
 
 
-⸻
 
  ### Education vs. Income 
 
@@ -122,7 +109,6 @@ This scatterplot shows the relationship between bachelor’s degree attainment a
 
 The spread of data is broader at higher education levels, reflecting greater variability in income among counties with more bachelor’s degree holders. Still, the clustering of points along the trend line indicates a stronger and more consistent link between bachelor’s degrees and economic prosperity. This pattern supports the hypothesis that bachelor’s-level education plays a more direct role in boosting income, and underscores the potential value of policies that increase access to four-year degree programs.
 
-⸻
 
 ### Variable Correlation
 
@@ -142,7 +128,7 @@ In contrast, the correlation between associate degree percentage and income is n
 An interesting secondary pattern is the slight negative correlation (-0.059) between associate and bachelor’s degree percentages. This may indicate that counties tend to emphasize one form of postsecondary education over the other—either favoring technical/community college pathways or four-year university pipelines, but rarely both at high levels.
 
 Overall, this matrix helps confirm that while both degrees are common across the U.S., only bachelor’s degree attainment shows a strong and consistent relationship with income, providing clear direction for policy and investment strategies.
-⸻
+
 
 ### Linear Assumption & Distribution Checks
 
@@ -153,24 +139,21 @@ Using ggpairs, we evaluated distributions, outliers, and pairwise relationships 
 ![Pairwise Comparison Plot](images/clean_pair_plot.png)
 
 
-⸻
+## Training Machine Learning Model
 
-### Preprocessing for Modeling
+EDA identifies missing values, outliers, or skewed data, but the data often still needs to be cleaned and preprocessed before it's used to train a model. To do this we started by preprocessing the model in order to clean the dataset by handling missing values. After this was complete we move into feature selection to clearly define input and output variables. We decided to define the target variable as per_capita_personal_income_2021 and used the other features as predictors. We then split data into 70% training and 30% testing sets to train the model on one subset and evaluate its performance on unseen data. We then did model evaluation to trains the statistical model to learn about the relationships. Please refer to our notebokok/rmd file to see the code that was done for this. Below is the generated stats:
 
-Before training the model, we handled missing values via median imputation for numeric columns and dropped rows with missing categorical values. We also scaled numeric variables.
-	•	Purpose: Preprocessing ensures that the model is trained on clean, normalized data, which improves accuracy and convergence.
-	•	Insight: Proper preprocessing prevents data skew and enhances model interpretability.
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.66056 -0.05052 -0.00656  0.03796  1.59719
 
-📌 Insert: Note or table showing before/after stats for NA counts and feature scales
+Residual standard error: 0.1308 on 2051 degrees of freedom
+Multiple R-squared:  0.9846,	Adjusted R-squared:  0.9841 
+F-statistic:  2421 on 54 and 2051 DF,  p-value: < 2.2e-16
 
-⸻
-
-11. Feature Selection and Data Splitting
-
-We selected per_capita_personal_income_2021 as the target variable and used the remaining features as predictors. We split the data into training and test sets (70/30).
-	•	Purpose: Splitting ensures the model can be evaluated on unseen data, which is essential for estimating real-world performance.
-
-📌 Insert: Table showing number of observations in train/test sets
+RMSE: 0.122739 
+MAE: 0.07321236 
+R-squared: 0.9815237 
 
 
 ## Main Observations and Conclusion
