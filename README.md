@@ -143,17 +143,31 @@ Using ggpairs, we evaluated distributions, outliers, and pairwise relationships 
 
 EDA identifies missing values, outliers, or skewed data, but the data often still needs to be cleaned and preprocessed before it's used to train a model. To do this we started by preprocessing the model in order to clean the dataset by handling missing values. After this was complete we move into feature selection to clearly define input and output variables. We decided to define the target variable as per_capita_personal_income_2021 and used the other features as predictors. We then split data into 70% training and 30% testing sets to train the model on one subset and evaluate its performance on unseen data. We then did model evaluation to trains the statistical model to learn about the relationships. Please refer to our notebokok/rmd file to see the code that was done for this. Below is the generated stats:
 
-Residuals:
-     Min       1Q   Median       3Q      Max 
--0.66056 -0.05052 -0.00656  0.03796  1.59719
+| Statistic         | Value    |
+| ----------------- | -------- |
+| Min               | -0.66056 |
+| 1st Quartile (1Q) | -0.05052 |
+| Median            | -0.00656 |
+| 3rd Quartile (3Q) | 0.03796  |
+| Max               | 1.59719  |
 
-Residual standard error: 0.1308 on 2051 degrees of freedom
-Multiple R-squared:  0.9846,	Adjusted R-squared:  0.9841 
-F-statistic:  2421 on 54 and 2051 DF,  p-value: < 2.2e-16
+#### Model Summary
+Residual Standard Error: 0.1308 (on 2051 degrees of freedom)
 
-RMSE: 0.122739 
-MAE: 0.07321236 
-R-squared: 0.9815237 
+Multiple R-squared: 0.9846
+
+Adjusted R-squared: 0.9841
+
+F-statistic: 2421 on 54 and 2051 degrees of freedom
+
+p-value: < 2.2e-16
+
+#### Performance Metrics
+Root Mean Squared Error (RMSE): 0.1227
+
+Mean Absolute Error (MAE): 0.0732
+
+R-squared: 0.9815
 
 
 ## Main Observations and Conclusion
