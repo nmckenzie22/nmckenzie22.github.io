@@ -153,20 +153,14 @@ EDA identifies missing values, outliers, or skewed data, but the data often stil
 
 #### Model Summary
 Residual Standard Error: 0.1308 (on 2051 degrees of freedom)
-
 Multiple R-squared: 0.9846
-
 Adjusted R-squared: 0.9841
-
 F-statistic: 2421 on 54 and 2051 degrees of freedom
-
 p-value: < 2.2e-16
 
 #### Performance Metrics
 Root Mean Squared Error (RMSE): 0.1227
-
 Mean Absolute Error (MAE): 0.0732
-
 R-squared: 0.9815
 
 
