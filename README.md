@@ -165,11 +165,18 @@ Overall, these metrics suggest that the linear regression model is performing we
 
 The model shows that education level percentages (such as the percentage of people with an associate or bachelor’s degree) are important factors in predicting per capita income in 2021. The model’s high accuracy and low errors suggest that it can be used to make reliable predictions.
 
-## Main Observations and Conclusion
-.
+## Conclusions 
+
+The goal of our analysis was to determine how educational attainment affects per capita income at the county level in the United States. We examined detailed data on income and education across over 3,000 counties, focusing on the percentages of residents with associate and bachelor’s degrees. Based on our analysis, we found a clear and consistent pattern: bachelor’s degree attainment shows a strong positive correlation with income, while associate degree attainment does not. Although both degrees are widely distributed, only bachelor’s degrees appear to significantly predict higher economic outcomes. This pattern was confirmed through scatterplots, correlation matrices, and a well-performing linear regression model, which further showed that education variables—particularly bachelor’s degree percentages—are important predictors of per capita income. While education is not the only factor influencing income, our findings support the view that expanding access to four-year degrees may be an effective strategy for boosting local economic well-being.
+
+## Main Observations
+
+Firstly, we observed that per capita income increased modestly from 2019 to 2021, with income distribution showing a right-skewed pattern across all three years. At the same time, education levels varied widely. Associate degree attainment was relatively consistent across counties, while bachelor’s degree percentages showed greater disparity—some counties had fewer than 10% of residents with bachelor’s degrees, while others exceeded 70%. When we plotted these variables against income, associate degree percentages showed little to no correlation, while bachelor’s degrees showed a strong and linear positive relationship. This trend was reinforced by a correlation of 0.618 between bachelor’s degree percentage and income, compared to just 0.024 for associate degrees. Our modeling results supported these findings: the linear regression model had a high R-squared of 0.98, indicating that our predictors (including education) explain most of the variation in income. Additionally, we noted a small negative correlation between associate and bachelor’s degree percentages, suggesting that counties may lean toward one educational pathway over the other.
+
 
 ## Actionable Steps
-probs figure out later
+
+Based on our findings, we propose several recommendations for policymakers, educators, and organizations interested in improving economic outcomes through education. First, efforts should be directed toward expanding access to bachelor’s degree programs in counties with low attainment rates. Philanthropic investments, state funding, and public-private partnerships could support the development of satellite campuses, online degree options, and financial aid programs targeted at underserved regions. Second, increasing the number of transfer opportunities from community colleges to four-year institutions could help bridge the gap for students who begin with associate degrees but aim for bachelor’s completion. Third, while our analysis focused on quantitative data, future research could benefit from integrating qualitative data—such as student experiences, barriers to enrollment, or perceptions of degree value—to better understand the human factors behind these trends. Finally, exploring the role of other education levels (e.g., master’s degrees, trade certifications) could reveal alternative routes to economic growth in counties where four-year degree access remains limited. These strategies could help inform data-driven decisions around education funding and workforce development.
 
 ## Links
 Youtube Video:
