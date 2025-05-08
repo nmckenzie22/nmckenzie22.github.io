@@ -183,8 +183,8 @@ print(p1)
 ggsave(
   filename = "~/Downloads/assoc_deg_vs_income.png",
   plot = p1,
-  width = 3.5,
-  height = 2,
+  width = 8,
+  height = 3,
   dpi = 300
 )
 
@@ -207,8 +207,8 @@ print(p2)
 ggsave(
   filename = "~/Downloads/bach_deg_vs_income.png",
   plot = p2,
-  width = 7,
-  height = 4,
+  width = 6,
+  height = 3,
   dpi = 300
 )
 
@@ -217,23 +217,79 @@ ggsave(
 Correlation Matrix:
 ```{r}
 library(corrplot)
+library(dplyr)
+library(stringr)
 
+# Clean and rename numeric columns
 numeric_data <- data %>%
   select(where(is.numeric)) %>%
   na.omit()
 
+# Create readable, titled column names
+clean_names <- colnames(numeric_data) %>%
+  str_replace_all("_", " ") %>%
+  str_to_title()
+
+colnames(numeric_data) <- clean_names
+
+# Compute correlation matrix
 cor_matrix <- cor(numeric_data)
 
-corrplot(cor_matrix, method = "color", type = "upper", tl.cex = 0.8)
+# --- 1. Print to RStudio viewer ---
+corrplot(
+  cor_matrix,
+  method = "color",
+  type = "upper",
+  tl.cex = 0.8,
+  addCoef.col = "black",
+  number.cex = 0.7,
+  col = colorRampPalette(c("red", "white", "blue"))(200)
+)
+
+# --- 2. Save to Downloads folder ---
+png(filename = "~/Downloads/correlation_plot.png", width = 800, height = 800)
+
+corrplot(
+  cor_matrix,
+  method = "color",
+  type = "upper",
+  tl.cex = 0.8,
+  addCoef.col = "black",
+  number.cex = 0.7,
+  col = colorRampPalette(c("red", "white", "blue"))(200)
+)
+
+dev.off()
 
 ```
 
 Linear Assumptions & Distribution Checks (This checks: Normality of variables, Linearity, Outliers):
 ```{r}
-ggpairs(numeric_data[, c("per_capita_personal_income_2021", 
-                         "associate_degree_percentage_2016_2020", 
-                         "bachelor_degree_percentage_2015_2019")])
+library(GGally)
 
+# Convert matrix to data frame
+numeric_df <- as.data.frame(numeric_data)
+
+# Rename columns directly (overwrite column names in place)
+colnames(numeric_df)[colnames(numeric_df) == "per_capita_personal_income_2021"] <- "Per Capita Income 2021"
+colnames(numeric_df)[colnames(numeric_df) == "associate_degree_percentage_2016_2020"] <- "Associate Degree % (2016–2020)"
+colnames(numeric_df)[colnames(numeric_df) == "bachelor_degree_percentage_2015_2019"] <- "Bachelor's Degree % (2015–2019)"
+
+# Create default ggpairs plot (retaining standard look)
+pair_plot <- ggpairs(numeric_df[, c(
+  "Per Capita Income 2021",
+  "Associate Degree % (2016–2020)",
+  "Bachelor's Degree % (2015–2019)"
+)])
+
+# Save to Downloads
+ggsave(
+  filename = "~/Downloads/clean_pair_plot.png",
+  plot = pair_plot,
+  width = 6.5,
+  height = 6.5,
+  dpi = 300
+)
 ```
 
 ### Training machine learning model
