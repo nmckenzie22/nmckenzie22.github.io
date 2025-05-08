@@ -175,5 +175,5 @@ probs figure out later
 Youtube Video:
 
 Google Colab: https://colab.research.google.com/drive/1txZM5BAAxc7LEmcCqH3fBvP8fF4bm-2z?usp=sharing
-
+⚠️ Before running in Colab: Change runtime to R (Runtime > Change runtime type > R) ⚠️
 ## Acknowledgements
