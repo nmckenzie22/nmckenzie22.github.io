@@ -105,9 +105,7 @@ The spread of data is broader at higher education levels, reflecting greater var
 
 ### Variable Correlation
 
-We created a correlation matrix and heatmap for all numeric variables.
-	•	Purpose: To quantitatively identify relationships between variables.
-	•	Insight: This confirms whether our educational variables are significantly correlated with income, justifying their use in a predictive model.
+We created a correlation matrix and heatmap for all numeric variables to quantitatively identify relationships between variables. This confirms whether our educational variables are significantly correlated with income, justifying their use in a predictive model.
 
 ![Correlation Plot](images/correlation_plot.png)
 
