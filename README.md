@@ -64,9 +64,7 @@ These distributions reaffirm our earlier visual findings: education levels and i
 
 ### Income Growth Over Time
 
-We visualized how per capita income changed across 2019, 2020, and 2021 using boxplots.
-	•	Purpose: To observe income distribution and trends over time, and to check for major economic shifts (e.g., pandemic impact).
-	•	Insight: This helps contextualize education’s effect on income by tracking whether changes in income are consistent over time.
+We first visualized how per capita income changed across 2019, 2020, and 2021 using boxplots to observe income distribution and trends over time, and to check for major economic shifts (e.g., pandemic impact). This helps contextualize education’s effect on income by tracking whether changes in income are consistent over time.
 
 ![Distribution of Per Capita Income by Year](images/distribution_income_byYear.png)
 
@@ -76,8 +74,7 @@ This boxplot illustrates the distribution of per capita income across U.S. count
 
 ### Distributions of Education Level
 
-We plotted boxplots of associate and bachelor’s degree percentages.
-	•	Purpose: To understand how educational attainment is distributed across counties, which is foundational for correlating with income.
+We then plotted boxplots of associate and bachelor’s degree percentages in order to understand how educational attainment is distributed across counties, which is foundational for correlating with income.
 
 ![Education Level Distribution](images/education_level_boxplot.png)
 
