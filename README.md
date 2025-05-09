@@ -179,7 +179,9 @@ Firstly, we observed that per capita income increased modestly from 2019 to 2021
 Based on our findings, we propose several recommendations for policymakers, educators, and organizations interested in improving economic outcomes through education. First, efforts should be directed toward expanding access to bachelor’s degree programs in counties with low attainment rates. Philanthropic investments, state funding, and public-private partnerships could support the development of satellite campuses, online degree options, and financial aid programs targeted at underserved regions. Second, increasing the number of transfer opportunities from community colleges to four-year institutions could help bridge the gap for students who begin with associate degrees but aim for bachelor’s completion. Third, while our analysis focused on quantitative data, future research could benefit from integrating qualitative data—such as student experiences, barriers to enrollment, or perceptions of degree value—to better understand the human factors behind these trends. Finally, exploring the role of other education levels (e.g., master’s degrees, trade certifications) could reveal alternative routes to economic growth in counties where four-year degree access remains limited. These strategies could help inform data-driven decisions around education funding and workforce development.
 
 ## Links
-Youtube Video:
+Presentation Summary Video:
+
+Tutorial Walkthrough Video: 
 
 Google Colab: https://colab.research.google.com/drive/1txZM5BAAxc7LEmcCqH3fBvP8fF4bm-2z?usp=sharing
 
