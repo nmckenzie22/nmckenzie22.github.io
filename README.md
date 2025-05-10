@@ -181,7 +181,7 @@ Based on our findings, we propose several recommendations for policymakers, educ
 ## Links
 Presentation Summary Video: https://youtu.be/4nkDBpEmEzU
 
-Tutorial Walkthrough Video: 
+Tutorial Walkthrough Video: https://youtu.be/i37JlZ-97xo 
 
 Google Colab: https://colab.research.google.com/drive/1txZM5BAAxc7LEmcCqH3fBvP8fF4bm-2z?usp=sharing
 
